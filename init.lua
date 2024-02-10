@@ -15,4 +15,5 @@ require("nvim-treesitter-config")
 require("telescope-config")
 require("lsp-zero-config")
 require("undotree-config")
+require("git-config")
 require'lspconfig'.ocamllsp.setup{}

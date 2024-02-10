@@ -2,16 +2,16 @@
 return {
     -- Which-key Extension
     {
-    "folke/which-key.nvim",
-    lazy = true,
+        "folke/which-key.nvim",
+        lazy = true,
     },
--- Hop (Better Navigation)
+    -- Hop (Better Navigation)
     {
         "phaazon/hop.nvim",
         lazy = true,
     },
 
-   -- Bufferline 
+    -- Bufferline 
     {
         'akinsho/bufferline.nvim',
         dependencies = 'nvim-tree/nvim-web-devicons'
@@ -32,7 +32,7 @@ return {
             'nvim-tree/nvim-web-devicons',
         },
     },
--- Added this plugin.
+    -- Added this plugin.
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -64,6 +64,11 @@ return {
             {'nvim-lua/plenary.nvim'},
         }
     },
+    -- Git Integration
+    -- Added this plugin
+    {
+        "lewis6991/gitsigns.nvim",
+    },  
     -- Treesitter
     -- Added this plugin to our initial config
     {
@@ -72,8 +77,12 @@ return {
     -- Undo-Tree
     -- Added this plugin
     {
+        "tpope/vim-fugitive" 
+    },
+    {
         "jiaoshijie/undotree",
-      dependencies  = {
+        dependencies  = {
             "nvim-lua/plenary.nvim",
         },
-    },}
+    },
+}
