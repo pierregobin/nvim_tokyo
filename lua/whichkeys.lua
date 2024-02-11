@@ -91,7 +91,7 @@ local mappings = {
 
     ["m"] = { "<cmd>Mason<cr>", "Mason UI for Lsp" },
     ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
-
+    ["u"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" },
     l = {
         name = "LSP",
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -121,7 +121,7 @@ local mappings = {
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
         c = { "<cmd>Telescope commands<cr>", "Commands" },
     },
---Git
+    --Git
     g = {
         name = "Git",
         j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },

@@ -5,6 +5,12 @@ require("keymaps")
 require("lazy-config")
 require("plugins")
 require("nvim-tree").setup()
+require("tokyonight").setup({
+          -- other configs
+          on_colors = function(colors)
+            colors.border = colors.orange
+          end
+        })
 require("options")
 require("whichkeys")
 require("buffer-line")
@@ -16,4 +22,5 @@ require("telescope-config")
 require("lsp-zero-config")
 require("undotree-config")
 require("git-config")
+
 require'lspconfig'.ocamllsp.setup{}
