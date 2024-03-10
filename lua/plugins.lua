@@ -10,7 +10,18 @@ return {
         "phaazon/hop.nvim",
         lazy = true,
     },
-
+{ 'echasnovski/mini.nvim', version = '*' },
+    { 'nvim-zh/colorful-winsep.nvim' ,
+        config = true,
+  event = { "WinNew" },},
+{
+  "rbong/vim-flog",
+  lazy = true,
+  cmd = { "Flog", "Flogsplit", "Floggit" },
+  dependencies = {
+    "tpope/vim-fugitive",
+  },
+},
     -- Bufferline 
     {
         'akinsho/bufferline.nvim',
@@ -23,13 +34,25 @@ return {
     {
         'folke/tokyonight.nvim',
     },
+{
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
+},
     -- Nvimtree (File Explorer)
     -- Added this reference to the initial file
     {
         'nvim-tree/nvim-tree.lua',
         lazy = true,
         dependencies = {
+               'nvim-lua/plenary.nvim',
             'nvim-tree/nvim-web-devicons',
+                  "MunifTanjim/nui.nvim",
         },
     },
     -- Added this plugin.
@@ -68,7 +91,7 @@ return {
     -- Added this plugin
     {
         "lewis6991/gitsigns.nvim",
-    },  
+    },
     -- Treesitter
     -- Added this plugin to our initial config
     {
@@ -77,12 +100,18 @@ return {
     -- Undo-Tree
     -- Added this plugin
     {
-        "tpope/vim-fugitive" 
+        "tpope/vim-fugitive"
     },
     {
         "jiaoshijie/undotree",
         dependencies  = {
             "nvim-lua/plenary.nvim",
+        },
+    },
+    {'romgrk/barbar.nvim',
+        dependencies = {
+            'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+            'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
         },
     },
 }

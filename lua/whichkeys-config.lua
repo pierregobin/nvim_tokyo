@@ -16,7 +16,7 @@ local setup = {
         -- the presets plugin, adds help for a bunch of default keybindings in Neovim
         -- No actual key bindings are created
         presets = {
-            operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
+            operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
             motions = true, -- adds help for motions
             text_objects = true, -- help for text objects triggered after entering an operator
             windows = true, -- default bindings on <c-w>
@@ -61,7 +61,7 @@ local setup = {
     hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
     show_help = true, -- show help message on the command line when the popup is visible
     triggers = "auto", -- automatically setup triggers
-    -- triggers = {"<leader>"} -- or specify a list manually
+    --triggers = {"<leader>"}, -- or specify a list manually
     triggers_blacklist = {
         -- list of mode / prefixes that should never be hooked by WhichKey
         -- this is mostly relevant for key maps that start with a native binding
@@ -89,6 +89,7 @@ local mappings = {
     ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
     -- lsp keybindings in whichkey.lua
 
+    ["|"] = { "<cmd>vsplit<CR>", "Vertical Split" },
     ["m"] = { "<cmd>Mason<cr>", "Mason UI for Lsp" },
     ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
     ["u"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" },
@@ -142,7 +143,8 @@ local mappings = {
             "<cmd>Gitsigns diffthis HEAD<cr>",
             "Diff",
         },
-    },}
+    },
+}
 
 which_key.setup(setup)
 which_key.register(mappings, opts)

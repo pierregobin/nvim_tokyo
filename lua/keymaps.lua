@@ -31,6 +31,8 @@ keymap("n", "<c-down>", ":resize +2<cr>", opts)
 keymap("n", "<c-right>", ":vertical resize -2<cr>", opts)
 keymap("n", "<c-left>", ":vertical resize +2<cr>", opts)
 
+keymap("n", "<C-n>", ":cnext <CR>", opts)
+keymap("n", "<C-p>", ":cprevious <CR>", opts)
 
 -- navigate buffers
 keymap("n", "<tab>", ":bnext<cr>", opts) -- Next Tab 

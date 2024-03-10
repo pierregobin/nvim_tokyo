@@ -1,14 +1,14 @@
 -- nvim-tree-config.lua
 
--- Open the file in r mode (don't modify file, just read)
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
+local status_ok, nvimtree = pcall(require, "nvim-tree")
 if not status_ok then
     return
 end
 
 
 
-require('nvim-tree').setup {
+--require('nvim-tree').setup {
+local setup = {
     update_focused_file = {
         enable = true,
         update_cwd = true,
@@ -37,7 +37,7 @@ require('nvim-tree').setup {
               staged = "✓",
               unmerged = "",
               renamed = "➜",
-              untracked = "★",
+              untracked = "untracked",
               deleted = "",
               ignored = "◌",
 --                     staged = "S",
@@ -83,7 +83,7 @@ require('nvim-tree').setup {
         enable = true,
         show_on_dirs = true,
         icons = {
-            hint = "",
+            hint = "H",
             info = "",
             warning = "",
             error = "",
@@ -110,3 +110,4 @@ require('nvim-tree').setup {
     },
 }
 
+nvimtree.setup(setup)
