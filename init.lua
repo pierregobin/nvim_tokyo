@@ -45,6 +45,7 @@ require("colorful-winsep").setup({
 require('mini.sessions').setup({})
 
 require("whichkeys-config")
-
+require('mini.sessions').setup({})
+require("mini.pairs").setup({})
 require('lspconfig').ocamllsp.setup{}
 require('lspconfig').pyright.setup{}

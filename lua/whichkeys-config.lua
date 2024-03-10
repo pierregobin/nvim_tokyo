@@ -92,7 +92,8 @@ local mappings = {
     ["|"] = { "<cmd>vsplit<CR>", "Vertical Split" },
     ["m"] = { "<cmd>Mason<cr>", "Mason UI for Lsp" },
     ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
-    ["u"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" },
+    ["U"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" },
+    ["("] = { "<cmd>lua vim.g.minipairs_disable = not vim.g.minipairs_disable<CR>","Pairs toggle"},
     l = {
         name = "LSP",
         a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },

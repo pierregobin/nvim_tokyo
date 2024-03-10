@@ -48,3 +48,5 @@ opt.wrap = false -- Disable line wrap
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 vim.cmd[[colorscheme tokyonight-night]]
+vim.g.minipairs_disable = false
+vim.b.minipairs_disable = false
