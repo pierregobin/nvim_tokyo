@@ -14,27 +14,23 @@ return {
     {'Shougo/deoplete.nvim'},
     { 'nvim-zh/colorful-winsep.nvim' ,
         config = true,
-        event = { "WinNew" },},
-    {
-        "rbong/vim-flog",
-        lazy = true,
-        cmd = { "Flog", "Flogsplit", "Floggit" },
-        dependencies = {
-            "tpope/vim-fugitive",
-        },
+        event = { "WinNew" },
     },
-    -- Bufferline
+    -- Bufferline - to get tabs on top, create groups ...
     {
         'akinsho/bufferline.nvim',
         dependencies = 'nvim-tree/nvim-web-devicons'
     },
+    -- lualine : bottom
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },-- Colorscheme
+    },
+    -- Colorscheme
     {
         'folke/tokyonight.nvim',
     },
+    -- neo-tree to browse file system
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -45,8 +41,7 @@ return {
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         }
     },
-    -- Nvimtree (File Explorer)
-    -- Added this reference to the initial file
+    -- Nvimtree (File Explorer) -- duplicate of previous
     {
         'nvim-tree/nvim-tree.lua',
         lazy = true,
@@ -56,7 +51,7 @@ return {
             "MunifTanjim/nui.nvim",
         },
     },
-    -- Added this plugin.
+    -- Language Server
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -89,33 +84,42 @@ return {
         }
     },
     -- Git Integration
-    -- Added this plugin
     {
         "lewis6991/gitsigns.nvim",
     },
     -- Treesitter
-    -- Added this plugin to our initial config
     {
         "nvim-treesitter/nvim-treesitter",
     },
     -- Undo-Tree
-    -- Added this plugin
-    {
-        "tpope/vim-fugitive"
-    },
     {
         "jiaoshijie/undotree",
         dependencies  = {
             "nvim-lua/plenary.nvim",
         },
     },
+    -- Tabs as understood by any other editor
     {'romgrk/barbar.nvim',
         dependencies = {
             'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
             'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
         },
     },
+    -- to ease writting surround char
     {'tpope/vim-surround'},
+    -- git branch viewer
+    {
+        "rbong/vim-flog",
+        lazy = true,
+        cmd = { "Flog", "Flogsplit", "Floggit" },
+        dependencies = {
+            "tpope/vim-fugitive",
+        },
+    },
+    -- Integration of Git
+    {
+        "tpope/vim-fugitive"
+    },
     {
         "kdheepak/lazygit.nvim",
         cmd = {
