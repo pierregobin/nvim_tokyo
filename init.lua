@@ -22,6 +22,7 @@ require("undotree-config")
 require("barbar-config")
 require("git-config")
 require("mini.align").setup()
+require("autocmd")
 require("options")
 require("colorful-winsep").setup({
   -- highlight for Window separator

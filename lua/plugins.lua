@@ -10,19 +10,20 @@ return {
         "phaazon/hop.nvim",
         lazy = true,
     },
-{ 'echasnovski/mini.nvim', version = '*' },
+    { 'echasnovski/mini.nvim', version = '*' },
+    {'Shougo/deoplete.nvim'},
     { 'nvim-zh/colorful-winsep.nvim' ,
         config = true,
-  event = { "WinNew" },},
-{
-  "rbong/vim-flog",
-  lazy = true,
-  cmd = { "Flog", "Flogsplit", "Floggit" },
-  dependencies = {
-    "tpope/vim-fugitive",
-  },
-},
-    -- Bufferline 
+        event = { "WinNew" },},
+    {
+        "rbong/vim-flog",
+        lazy = true,
+        cmd = { "Flog", "Flogsplit", "Floggit" },
+        dependencies = {
+            "tpope/vim-fugitive",
+        },
+    },
+    -- Bufferline
     {
         'akinsho/bufferline.nvim',
         dependencies = 'nvim-tree/nvim-web-devicons'
@@ -34,25 +35,25 @@ return {
     {
         'folke/tokyonight.nvim',
     },
-{
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    }
-},
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        }
+    },
     -- Nvimtree (File Explorer)
     -- Added this reference to the initial file
     {
         'nvim-tree/nvim-tree.lua',
         lazy = true,
         dependencies = {
-               'nvim-lua/plenary.nvim',
+            'nvim-lua/plenary.nvim',
             'nvim-tree/nvim-web-devicons',
-                  "MunifTanjim/nui.nvim",
+            "MunifTanjim/nui.nvim",
         },
     },
     -- Added this plugin.
@@ -114,4 +115,23 @@ return {
             'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
         },
     },
-}
+    {'tpope/vim-surround'},
+    {
+        "kdheepak/lazygit.nvim",
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        -- optional for floating window border decoration
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        -- setting the keybinding for LazyGit with 'keys' is recommended in
+        -- order to load the plugin when the command is run for the first time
+        keys = {
+            { "<leader>Lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+        },
+    }}
