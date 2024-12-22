@@ -135,6 +135,12 @@ return {
     {
         "lewis6991/gitsigns.nvim",
     },
+    -- vim conflict to better handle conflict in vim
+    {
+        'akinsho/git-conflict.nvim',
+        tag = "v2.1.0",
+        config = true
+    },
     -- Lazygit
     {
         "kdheepak/lazygit.nvim",
