@@ -135,6 +135,7 @@ return {
     {
         "lewis6991/gitsigns.nvim",
     },
+    -- Lazygit
     {
         "kdheepak/lazygit.nvim",
         cmd = {
@@ -153,4 +154,5 @@ return {
         keys = {
             { "<leader>Lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
         },
-    }}
+    }
+}
