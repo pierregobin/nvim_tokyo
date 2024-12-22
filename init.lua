@@ -22,6 +22,7 @@ require("undotree-config")
 require("barbar-config")
 require("git-config")
 require("mini.align").setup()
+require("mini.surround").setup({})
 require("autocmd")
 require("options")
 require("colorful-winsep").setup({
