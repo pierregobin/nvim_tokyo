@@ -136,9 +136,9 @@ return {
         },
     },
     -- to ease writting surround char
-    {'tpope/vim-surround',
-    tag = "v2.2"
-    },
+--    {'tpope/vim-surround',
+--    tag = "v2.2"
+--    },
     -- git branch viewer
     {
         "rbong/vim-flog",
