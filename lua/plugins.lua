@@ -3,37 +3,52 @@ return {
     -- Which-key Extension
     {
         "folke/which-key.nvim",
+        tag = "v3.15.0",
         lazy = true,
     },
     -- Hop (Better Navigation)
     {
         "phaazon/hop.nvim",
+        tag = "v2.0.3",
         lazy = true,
     },
-    { 'echasnovski/mini.nvim', version = '*' },
-    {'Shougo/deoplete.nvim'},
-    { 'nvim-zh/colorful-winsep.nvim' ,
+    -- collection of lua library
+    {
+        'echasnovski/mini.nvim',
+        tag = "v0.14.0"
+    },
+    -- Autocompletion via deoplete
+    {
+        'Shougo/deoplete.nvim',
+        tag = "6.1"
+    },
+    -- Win separation
+    {
+        'nvim-zh/colorful-winsep.nvim' ,
         config = true,
         event = { "WinNew" },
     },
     -- Bufferline - to get tabs on top, create groups ...
     {
         'akinsho/bufferline.nvim',
-        dependencies = 'nvim-tree/nvim-web-devicons'
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        tag = "v4.9.0"
     },
     -- lualine : bottom
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        tag = "compat-nvim-0.6"
     },
     -- Colorscheme
     {
         'folke/tokyonight.nvim',
+        tag = "v4.11.0"
     },
     -- neo-tree to browse file system
     {
         "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
+        tag = "3.27",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -44,6 +59,7 @@ return {
     -- Nvimtree (File Explorer) -- duplicate of previous
     {
         'nvim-tree/nvim-tree.lua',
+        tag = "v1.9.0",
         lazy = true,
         dependencies = {
             'nvim-lua/plenary.nvim',
@@ -78,6 +94,7 @@ return {
     -- Added these plugins to install Telescope
     {
         'nvim-telescope/telescope.nvim',
+        tag = "0.1.8",
         lazy = true,
         dependencies = {
             {'nvim-lua/plenary.nvim'},
@@ -86,6 +103,7 @@ return {
     -- Treesitter
     {
 	"nvim-treesitter/nvim-treesitter",
+        tag = "v0.9.3",
 	config = function()
 		require("nvim-treesitter.configs").setup {
 			highlight = {
@@ -104,22 +122,27 @@ return {
     -- Undo-Tree
     {
         "jiaoshijie/undotree",
+        release = "undotree v6.1",
         dependencies  = {
             "nvim-lua/plenary.nvim",
         },
     },
     -- Tabs as understood by any other editor
     {'romgrk/barbar.nvim',
+        tag = "v1.9.1",
         dependencies = {
             'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
             'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
         },
     },
     -- to ease writting surround char
-    {'tpope/vim-surround'},
+    {'tpope/vim-surround',
+    tag = "v2.2"
+    },
     -- git branch viewer
     {
         "rbong/vim-flog",
+        tag = "v3.0.0",
         lazy = true,
         cmd = { "Flog", "Flogsplit", "Floggit" },
         dependencies = {
@@ -129,11 +152,13 @@ return {
     -- All git stuffs are here
     -- Integration of Git
     {
-        "tpope/vim-fugitive"
+        "tpope/vim-fugitive",
+        tag = "v3.7"
     },
     -- Git Integration
     {
         "lewis6991/gitsigns.nvim",
+        tag = "v0.9.0"
     },
     -- vim conflict to better handle conflict in vim
     {
