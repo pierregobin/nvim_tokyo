@@ -83,10 +83,6 @@ return {
             {'nvim-lua/plenary.nvim'},
         }
     },
-    -- Git Integration
-    {
-        "lewis6991/gitsigns.nvim",
-    },
     -- Treesitter
     {
 	"nvim-treesitter/nvim-treesitter",
@@ -130,9 +126,14 @@ return {
             "tpope/vim-fugitive",
         },
     },
+    -- All git stuffs are here
     -- Integration of Git
     {
         "tpope/vim-fugitive"
+    },
+    -- Git Integration
+    {
+        "lewis6991/gitsigns.nvim",
     },
     {
         "kdheepak/lazygit.nvim",
