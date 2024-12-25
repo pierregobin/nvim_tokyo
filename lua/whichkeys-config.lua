@@ -90,6 +90,7 @@ local mappings = {
     -- lsp keybindings in whichkey.lua
 
     ["|"] = { "<cmd>vsplit<CR>", "Vertical Split" },
+    ["-"] = {"<cmd>split<CR>", "Horizontal Split"},
     ["m"] = { "<cmd>Mason<cr>", "Mason UI for Lsp" },
     ["r"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Reformat Code" },
     ["U"] = { "<cmd>lua require('undotree').toggle()<CR>", "Undo-Tree" },
