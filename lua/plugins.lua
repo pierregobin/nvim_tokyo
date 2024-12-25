@@ -181,5 +181,9 @@ return {
             "nvim-lua/plenary.nvim",
         },
         -- setting the keybinding for LazyGit is done in whichkey config
+    },
+    {
+          -- amongst your other plugins
+          {'akinsho/toggleterm.nvim', version = "*", config = true}
     }
 }
