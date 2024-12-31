@@ -8,10 +8,8 @@ ls.add_snippets("all", {
     s("pipelineloop",{
         t("pipelineloop("), i(1, "min"), t(" , "), i(2, "max"), t(" , "), i(3,"name"), t(")")
     }),
+    s("ach", {
+        t("ACHIEVABLE")
+    })
 })
 
-ls.add_snippets("all", {
-    s("ach"), {
-        t("ACHIEVABLE")
-    }
-})
