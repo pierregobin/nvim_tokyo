@@ -36,22 +36,21 @@
             -- equivalent to "${1:cond} ? ${2:then} : ${3:else}"
             i(1, "cond"), t(" ? "), i(2, "then"), t(" : "), i(3, "else")
         }),
-        s("HLS_PIPELINE_LOOP",{
-            t("HLS_PIPELINE_LOOP("), i(1, "min"), t(" , "), i(2, "max"), t(" , "), i(3,"name"), t(")")
-        })
+--        s("HLS_PIPELINE_LOOP",{
+--            t("HLS_PIPELINE_LOOP("), i(1, "min"), t(" , "), i(2, "max"), t(" , "), i(3,"name"), t(")")
+--        })
     })
-    for _, ft_path in ipairs(vim.api.nvim_get_runtime_file("/home/pierre/lua/custom/snippets/*.lua",true)) do
-        loadfile(ft_path)()
-    end
+
+    require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/custom/snippets/" })
 
     vim.keymap.set({"i","s"}, "<c-k>",  function ()
-        if ls.expand_or_jumpable() then
-            ls.expand_or_jump()
-        end
+	    if ls.expand_or_jumpable() then
+		    ls.expand_or_jump()
+	    end
     end, {silent=true})
 
     vim.keymap.set({"i","s"}, "<c-j>",  function ()
-        if ls.jumpable(-1) then
-            ls.jump(-1)
-        end
+	    if ls.jumpable(-1) then
+		    ls.jump(-1)
+	    end
     end, {silent=true})
