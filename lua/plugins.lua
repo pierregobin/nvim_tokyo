@@ -88,7 +88,10 @@ return {
             -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
-        }
+        },
+--        config = function ()
+--            require "custom.completion"
+--        end
     },
     -- Telescope (Fuzzy Finder)
     -- Added these plugins to install Telescope
