@@ -26,6 +26,7 @@ require("terminal-config")
 require("mini.align").setup()
 require("mini.surround").setup({})
 require("luasnip-config")
+require("nvim-lsp-hints-config")
 require("autocmd")
 require("options")
 require("colorful-winsep").setup({
