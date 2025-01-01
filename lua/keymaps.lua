@@ -18,7 +18,7 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
-    -- Normal --
+-- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts) -- left window
 keymap("n", "<C-k>", "<C-w>k", opts) -- up window
@@ -35,11 +35,11 @@ keymap("n", "<C-n>", ":cnext <CR>", opts)
 keymap("n", "<C-p>", ":cprevious <CR>", opts)
 
 -- navigate buffers
-keymap("n", "<tab>", ":bnext<cr>", opts) -- Next Tab
-keymap("n", "<s-tab>", ":bprevious<cr>", opts) -- Previous tab
+keymap("n", "<tab>", ":bnext<cr>", opts)          -- Next Tab
+keymap("n", "<s-tab>", ":bprevious<cr>", opts)    -- Previous tab
 keymap("n", "<teader>h", ":nohlsearch<cr>", opts) -- No highlight search
-keymap("n", "JJ" , ":lua require 'gitsigns'.next_hunk()<cr>", opts)
-keymap("n", "KK" , ":lua require 'gitsigns'.prev_hunk()<cr>", opts)
+keymap("n", "JJ", ":lua require 'gitsigns'.next_hunk()<cr>", opts)
+keymap("n", "KK", ":lua require 'gitsigns'.prev_hunk()<cr>", opts)
 
 -- move text up and down
 keymap("n", "<a-j>", "<esc>:m .+1<cr>==gi", opts) -- Alt-j
@@ -61,7 +61,7 @@ keymap("v", "<a-k>", ":m .-2<cr>==", opts)
 
 -- Visual Block --
 -- Move text up and down
-    --Terminal --
+--Terminal --
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)

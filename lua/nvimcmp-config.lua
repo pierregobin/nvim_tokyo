@@ -1,16 +1,15 @@
-
 -- nvim-cmp configuration
 local cmp = require('cmp')
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
-        ['<C-n>'] = cmp.mapping.select_next_item{ behaviour = cmp.SelectBehavior.insert},
-        ['<C-p>'] = cmp.mapping.select_prev_item{ behaviour = cmp.SelectBehavior.insert},
+        ['<C-n>'] = cmp.mapping.select_next_item { behaviour = cmp.SelectBehavior.insert },
+        ['<C-p>'] = cmp.mapping.select_prev_item { behaviour = cmp.SelectBehavior.insert },
         ['<C-y>'] = cmp.mapping(
             cmp.mapping.confirm {
                 behaviour = cmp.ConfirmBehavior.insert,
                 select = true,
             },
-            { "i","c" }
+            { "i", "c" }
         ),
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-u>'] = cmp.mapping.scroll_docs(4),
@@ -23,7 +22,7 @@ cmp.setup({
         { name = 'buffer' },
         { name = 'path' },
         { name = 'cmdline' },
-        { name = 'luasnip' },  -- You can add this if using luasnip
+        { name = 'luasnip' }, -- You can add this if using luasnip
     },
     snippet = {
         expand = function(args)

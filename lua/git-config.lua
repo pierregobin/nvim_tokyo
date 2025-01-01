@@ -1,4 +1,3 @@
-
 -- git-config.lua
 
 
@@ -8,7 +7,7 @@ if not status_ok then
 end
 
 gitsigns.setup {
-    signs = {
+    signs                   = {
         add          = { text = '+' },
         change       = { text = '#' },
         delete       = { text = 'X' },
@@ -16,24 +15,24 @@ gitsigns.setup {
         changedelete = { text = '~' },
         untracked    = { text = '┆' },
     },
---    signs_staged = {
---        add          = { text = '+' },
---        change       = { text = '#' },
---        delete       = { text = 'X' },
---        topdelete    = { text = '‾' },
---        changedelete = { text = '~' },
---        untracked    = { text = '┆' },
---    },
---    signs_staged_enable = true,
-    signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
-    numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
-    linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
-    word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
-    watch_gitdir = {
+    --    signs_staged = {
+    --        add          = { text = '+' },
+    --        change       = { text = '#' },
+    --        delete       = { text = 'X' },
+    --        topdelete    = { text = '‾' },
+    --        changedelete = { text = '~' },
+    --        untracked    = { text = '┆' },
+    --    },
+    --    signs_staged_enable = true,
+    signcolumn              = true, -- Toggle with `:Gitsigns toggle_signs`
+    numhl                   = false, -- Toggle with `:Gitsigns toggle_numhl`
+    linehl                  = false, -- Toggle with `:Gitsigns toggle_linehl`
+    word_diff               = false, -- Toggle with `:Gitsigns toggle_word_diff`
+    watch_gitdir            = {
         interval = 1000,
         follow_files = true,
     },
-    attach_to_untracked = true,
+    attach_to_untracked     = true,
     -- current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
     current_line_blame_opts = {
         virt_text = true,
@@ -43,11 +42,11 @@ gitsigns.setup {
         virt_text_priority = 100,
         use_focus = true,
     },
-    sign_priority = 6,
-    update_debounce = 100,
-    status_formatter = nil, -- Use default
-    max_file_length = 40000,
-    preview_config = {
+    sign_priority           = 6,
+    update_debounce         = 100,
+    status_formatter        = nil, -- Use default
+    max_file_length         = 40000,
+    preview_config          = {
         -- Options passed to nvim_open_win
         border = "single",
         style = "minimal",
@@ -55,7 +54,4 @@ gitsigns.setup {
         row = 0,
         col = 1,
     },
-    --    yadm = {
-    --        enable = false,
-    --    },
 }

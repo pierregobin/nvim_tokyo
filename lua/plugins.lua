@@ -1,4 +1,3 @@
-
 return {
     -- Which-key Extension
     {
@@ -24,7 +23,7 @@ return {
     },
     -- Win separation
     {
-        'nvim-zh/colorful-winsep.nvim' ,
+        'nvim-zh/colorful-winsep.nvim',
         config = true,
         event = { "WinNew" },
     },
@@ -73,25 +72,25 @@ return {
         branch = 'v1.x',
         dependencies = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            { 'neovim/nvim-lspconfig' },           -- Required
+            { 'williamboman/mason.nvim' },         -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+            { 'hrsh7th/nvim-cmp' },       -- Required
+            { 'hrsh7th/cmp-nvim-lsp' },   -- Required
+            { 'hrsh7th/cmp-buffer' },     -- Optional
+            { 'hrsh7th/cmp-path' },       -- Optional
+            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+            { 'hrsh7th/cmp-nvim-lua' },   -- Optional
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},             -- Required
-            {'rafamadriz/friendly-snippets'}, -- Optional
+            { 'L3MON4D3/LuaSnip' },           -- Required
+            { 'rafamadriz/friendly-snippets' }, -- Optional
         },
---        config = function ()
---            require "custom.completion"
---        end
+        --        config = function ()
+        --            require "custom.completion"
+        --        end
     },
     -- Telescope (Fuzzy Finder)
     -- Added these plugins to install Telescope
@@ -100,48 +99,49 @@ return {
         tag = "0.1.8",
         lazy = true,
         dependencies = {
-            {'nvim-lua/plenary.nvim'},
+            { 'nvim-lua/plenary.nvim' },
         }
     },
     -- Treesitter
     {
-	"nvim-treesitter/nvim-treesitter",
+        "nvim-treesitter/nvim-treesitter",
         tag = "v0.9.3",
-	config = function()
-		require("nvim-treesitter.configs").setup {
-			highlight = {
-				enable = true,
-			},
-			ensure_installed = {
-				"vimdoc",
-				"luadoc",
-				"vim",
-				"lua",
-				"markdown"
-			}
-		}
-	end,
+        config = function()
+            require("nvim-treesitter.configs").setup {
+                highlight = {
+                    enable = true,
+                },
+                ensure_installed = {
+                    "vimdoc",
+                    "luadoc",
+                    "vim",
+                    "lua",
+                    "markdown"
+                }
+            }
+        end,
     },
     -- Undo-Tree
     {
         "jiaoshijie/undotree",
-        release = "undotree v6.1",
-        dependencies  = {
+        release      = "undotree v6.1",
+        dependencies = {
             "nvim-lua/plenary.nvim",
         },
     },
     -- Tabs as understood by any other editor
-    {'romgrk/barbar.nvim',
+    {
+        'romgrk/barbar.nvim',
         tag = "v1.9.1",
         dependencies = {
-            'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+            'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
             'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
         },
     },
     -- to ease writting surround char
---    {'tpope/vim-surround',
---    tag = "v2.2"
---    },
+    --    {'tpope/vim-surround',
+    --    tag = "v2.2"
+    --    },
     -- git branch viewer
     {
         "rbong/vim-flog",
@@ -186,7 +186,7 @@ return {
         -- setting the keybinding for LazyGit is done in whichkey config
     },
     {
-          -- amongst your other plugins
-          {'akinsho/toggleterm.nvim', version = "*", config = true}
+        -- amongst your other plugins
+        { 'akinsho/toggleterm.nvim', version = "*", config = true }
     }
 }
