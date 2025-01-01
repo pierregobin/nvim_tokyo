@@ -35,16 +35,18 @@ keymap("n", "<C-n>", ":cnext <CR>", opts)
 keymap("n", "<C-p>", ":cprevious <CR>", opts)
 
 -- navigate buffers
-keymap("n", "<tab>", ":bnext<cr>", opts) -- Next Tab 
+keymap("n", "<tab>", ":bnext<cr>", opts) -- Next Tab
 keymap("n", "<s-tab>", ":bprevious<cr>", opts) -- Previous tab
-keymap("n", "<leader>h", ":nohlsearch<cr>", opts) -- No highlight search
+keymap("n", "<teader>h", ":nohlsearch<cr>", opts) -- No highlight search
+keymap("n", "JJ" , ":lua require 'gitsigns'.next_hunk()<cr>", opts)
+keymap("n", "KK" , ":lua require 'gitsigns'.prev_hunk()<cr>", opts)
 
 -- move text up and down
-keymap("n", "<a-j>", "<esc>:m .+1<cr>==gi", opts) -- Alt-j 
+keymap("n", "<a-j>", "<esc>:m .+1<cr>==gi", opts) -- Alt-j
 keymap("n", "<a-k>", "<esc>:m .-2<cr>==gi", opts) -- Alt-k
 
 -- insert --
--- press jk fast to exit insert mode 
+-- press jk fast to exit insert mode
 keymap("i", "jk", "<esc>", opts) -- Insert mode -> jk -> Normal mode
 keymap("i", "kj", "<esc>", opts) -- Insert mode -> kj -> Normal mode
 
