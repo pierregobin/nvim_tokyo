@@ -49,3 +49,4 @@ vim.g.markdown_recommended_style = 0
 vim.cmd [[colorscheme tokyonight-night]]
 vim.g.minipairs_disable = false
 vim.b.minipairs_disable = false
+vim.g.lastplace_ignore = "gitcommit,gitrebase,hgcommit,svn,xxd"

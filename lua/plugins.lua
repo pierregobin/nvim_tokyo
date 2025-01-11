@@ -186,10 +186,13 @@ return {
         -- setting the keybinding for LazyGit is done in whichkey config
     },
         -- amongst your other plugins
-        { 'akinsho/toggleterm.nvim', version = "*", config = true },
+    { 'akinsho/toggleterm.nvim', version = "*", config = true },
     {
             "chrisgrieser/nvim-lsp-endhints",
             event = "LspAttach",
             opts = {}, -- required, even if empty
     },
+    {
+        {"farmergreg/vim-lastplace", version="v4.5.0"},
+    }
 }
