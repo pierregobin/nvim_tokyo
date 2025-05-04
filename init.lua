@@ -54,5 +54,8 @@ require("whichkeys-config")
 require('mini.sessions').setup({})
 require("mini.pairs").setup({})
 --require("ocaml").setup({})
-require('lspconfig').ocamllsp.setup {}
-require('lspconfig').pyright.setup {}
+-- require('lspconfig').ocamllsp.setup {}
+-- require('lspconfig').pyright.setup {}
+-- require('lspconfig').clangd.setup {}
+vim.lsp.enable('pyright')
+vim.lsp.enable('clangd')
