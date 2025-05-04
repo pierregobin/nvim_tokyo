@@ -2,7 +2,7 @@ return {
     -- Which-key Extension
     {
         "folke/which-key.nvim",
-        tag = "v3.15.0",
+        tag = "stable",
         lazy = true,
     },
     -- Hop (Better Navigation)
