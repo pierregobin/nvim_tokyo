@@ -46,6 +46,7 @@ which_key.add({
     { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc="Rename" },
     { "<leader>ls", "<cmd>Telescope lsp_document_symbols<cr>", desc="Document Symbols" },
     { "<leader>lS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc="Workspace Symbols", },
+    {"<leader>m", "<cmd>Mason<cr>", desc="Mason UI for Lsp" },
 
     { "<leader>s", group = "Search"},
     {"<leader>sh",  "<cmd>Telescope help_tags<cr>", desc = "Find Help" },
