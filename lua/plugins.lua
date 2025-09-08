@@ -72,7 +72,7 @@ return {
         branch = 'v1.x',
         dependencies = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },           -- Required
+            { 'neovim/nvim-lspconfig', tag="v2.1.0" },           -- Required
             { 'williamboman/mason.nvim' },         -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
@@ -194,5 +194,19 @@ return {
     },
     {
         {"farmergreg/vim-lastplace", version="v4.5.0"},
-    }
+    },
+    {
+          "github/copilot.vim",
+          event = "InsertEnter"
+    },
+    {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        dependencies = {
+            { "nvim-lua/plenary.nvim", branch = "master" },
+        },
+        build = "make tiktoken",
+        opts = {
+            -- See Configuration section for options
+        },
+    },
 }
